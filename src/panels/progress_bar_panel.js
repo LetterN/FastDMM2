@@ -4,8 +4,6 @@ module.exports = class ProgressBarPanel extends Panel {
 	constructor(editor, title = "Loading...", modal = true) {
 		super(editor, {title, width: 600, height: 100, modal, can_close: false});
 
-		
-
 		this.header_obj.classList.add("center");
 		this.content_obj.classList.add("center");
 		this.content_obj.innerHTML = `

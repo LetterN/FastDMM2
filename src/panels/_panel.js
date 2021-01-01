@@ -7,6 +7,7 @@ class Panel extends EventEmitter {
 		super();
 		this.close_response = null;
 		this.container_obj = document.createElement('div');
+		Object.assign(this.container_obj.style, {width:width+"px", height:height+"px"});
 		this.container_obj.classList.add('uiframe-container');
 		this.panel_obj = document.createElement('div');
 		this.panel_obj.classList.add('uiframe');

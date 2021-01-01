@@ -5,8 +5,6 @@ module.exports = class GithubBranchChoosePanel extends Panel {
 	constructor(editor, branches, default_branch) {
 		super(editor, {title: "Choose a branch or commit", width: 365, height: 110, can_close: false, modal: true});
 
-		this.branches = branches;
-
 		this.content_obj.innerHTML = `
 		<div class='small-vertical-margins'>
 			<div class='button dropdown branch-dropdown' style='width:335px'><span class='branch-text' contenteditable></span></div>
