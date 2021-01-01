@@ -1,0 +1,33 @@
+@import '../vars.less';
+@import '../util.less';
+
+#ui-menubar {
+	position: absolute;
+	display: flex;
+    flex-direction: row;
+	height: @menu-height;
+	width: 100%; /* because absolute*/
+    background-color: #40628a;
+    align-items: center;
+	.no-user-select;
+}
+.menubar-item-filler {
+	flex-grow: 70;
+	flex-shrink: 0;
+	order: 40;
+}
+.menubar-item {
+	flex-grow: 1;
+	flex-shrink: 0;
+	transition: all 500ms ease;
+	height: inherit;
+
+	/* (: */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.menubar-item:hover {
+	background-color: rgb(36, 112, 148);
+	user-select: none;
+}

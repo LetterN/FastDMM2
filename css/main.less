@@ -1,5 +1,4 @@
-@menu-height: 32px;
-@tabs-height: 35px;
+@import './vars.less';
 @import './util.less';
 @import '../fontawesome/solid.less';
 @import './ui/bar.less';
@@ -8,12 +7,14 @@
 @import './ui/formatting.less';
 @import './ui/obj_tree.less';
 @import './ui/panel.less';
+@import './ui/navbar.less';
 
 body {
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 13px;
 	color: white;
 	background-color: black;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 13px;
+	margin: 0px;
 }
 
 #ui-container {
@@ -178,26 +179,16 @@ body {
 	}
 }
 
-#ui-menubar {
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	right: 0px;
-	height: @menu-height;
-	overflow-x: auto;
-	overflow-y: hidden;
-	background: #40628a;
-	white-space: nowrap;
-	scrollbar-width: thin;
-	.no-user-select;
-}
 .uiframe-modal {
 	position: fixed;
-	top: 0px;
-	left: 0px;
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
+
+	/* Properly centered with the power of flex! */
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 body.loading {

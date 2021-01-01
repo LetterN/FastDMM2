@@ -4,6 +4,12 @@ const fs = require('fs').promises;
 const crypto = require('crypto');
 
 module.exports = {
+	mode: 'development',
+	entry: './src/index.js',
+	output: {
+		path: path.resolve(__dirname, 'dist'),
+		filename: 'out.js'
+	},
 	module: {
 		rules: [
 			{
@@ -25,16 +31,10 @@ module.exports = {
 			}
 		]
 	},
-	entry: './src/index.js',
-	output: {
-		path: path.resolve(__dirname, 'dist'),
-		filename: 'out.js'
-	},
 	devServer: {
 		port: 12345,
 		contentBase: './res'
 	},
-	mode: 'development',
 	plugins: [
 		new CopyPlugin({
 			patterns: [

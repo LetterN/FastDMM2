@@ -70,7 +70,7 @@ module.exports = class Menu {
 	 */
 	add_to_menubar(menubar, name) {
 		let menu_parent = document.createElement("div");
-		menu_parent.classList.add("button", "menubar-item");
+		menu_parent.classList.add("menubar-item"); // the outline looks bad
 		menu_parent.textContent = name;
 		menu_parent.addEventListener("mousedown", (e) => {
 			if(e.defaultPrevented) return;

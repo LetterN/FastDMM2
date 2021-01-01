@@ -2,9 +2,12 @@
   "name": "fastdmm2",
   "version": "0.0.1",
   "description": "",
+  "repository": {
+    "url": "https://github.com/monster860/FastDMM2"
+  },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-dev": "npm i && webpack --mode=development",
     "build-prod": "npm ci && rimraf ./dist && webpack --mode=production"
   },
   "author": "",

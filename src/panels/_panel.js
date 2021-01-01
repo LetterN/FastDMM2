@@ -5,11 +5,8 @@ const EventEmitter = require('events');
 class Panel extends EventEmitter {
 	constructor(editor, {width=400, height=400, title="", can_close=true, modal=false}={}) {
 		super();
-		var left = document.documentElement.clientWidth / 2 - width / 2;
-		var top = document.documentElement.clientHeight / 2 - height / 2;
 		this.close_response = null;
 		this.container_obj = document.createElement('div');
-		Object.assign(this.container_obj.style, {width:width+"px", height:height+"px", left:left+"px", top:top+"px"});
 		this.container_obj.classList.add('uiframe-container');
 		this.panel_obj = document.createElement('div');
 		this.panel_obj.classList.add('uiframe');
